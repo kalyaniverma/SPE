@@ -6,11 +6,9 @@ pipeline {
         GITHUB_REPO_URL = 'https://github.com/kalyaniverma/SPE.git'
     }
 
-    options {
-	// Enable GitHub hook trigger for GitSCM polling
-	triggers {
-		githubPush()
-	}
+    // Enable GitHub hook trigger for GitSCM polling
+    triggers {
+	githubPush()
     }
     
     stages {
