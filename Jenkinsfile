@@ -19,7 +19,7 @@ pipeline {
         stage('Run Main Application') {
             steps {
                 script {
-                    sh "python3 calculator_main.py"
+                    sh "echo '${choice}\n${number}\n${exp}'|python3 calculator_main.py"
                 }
             }
         }
