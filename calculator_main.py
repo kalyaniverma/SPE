@@ -18,31 +18,29 @@ def menu():
     print("2. Factorial (x!)")
     print("3. Natural Logarithm (ln(x))")
     print("4. Power (x^b)")
-    print("5. Exit")
 
 def main():
-    while True:
-        menu()
-        choice = input("Enter your choice: ")
+    menu()
+    choice = input("Enter your choice: ")
 
-        if choice == '1':
-            x = float(input("Enter the number to find square root of: "))
-            print("Square Root of", x, ":", square_root(x))
-        elif choice == '2':
-            x = int(input("Enter the number to find factorial of: "))
-            print("Factorial of", x, ":", factorial(x))
-        elif choice == '3':
-            x = float(input("Enter the number to find natural logarithm of: "))
-            print("Natural Logarithm of", x, ":", natural_logarithm(x))
-        elif choice == '4':
-            x = float(input("Enter the base number: "))
-            b = float(input("Enter the power: "))
-            print(x, "raised to the power", b, ":", power(x, b))
-        elif choice == '5':
-            print("Exiting the program...")
-            break
-        else:
-            print("Invalid choice! Please enter a valid option.")
+    if choice == '1':
+        x = float(input("Enter the number to find square root of: "))
+        b = input("Extra number")
+        print("Square Root of", x, ":", square_root(x))
+    elif choice == '2':
+        x = int(input("Enter the number to find factorial of: "))
+        b = input("Extra number")
+        print("Factorial of", x, ":", factorial(x))
+    elif choice == '3':
+        x = float(input("Enter the number to find natural logarithm of: "))
+        b = input("Extra number")
+        print("Natural Logarithm of", x, ":", natural_logarithm(x))
+    elif choice == '4':
+        x = float(input("Enter the base number: "))
+        b = float(input("Enter the power: "))
+        print(x, "raised to the power", b, ":", power(x, b))
+    else:
+        print("Invalid choice! Please enter a valid option.")
 
 if __name__ == "__main__":
     main()
