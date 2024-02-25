@@ -5,9 +5,6 @@ pipeline {
         DOCKER_IMAGE_NAME = 'calculator_using_python'
         GITHUB_REPO_URL = 'https://github.com/kalyaniverma/SPE.git'
     }
-    choice = 2
-    number = 5
-    exp = 3
 
     // Enable GitHub hook trigger for GitSCM polling
     triggers {
@@ -15,6 +12,16 @@ pipeline {
     }
     
     stages {
+	stage('Set Variables'){
+	    steps{
+		script{
+		    choice = 2
+		    number = 5
+		    exp = 3
+		}
+	    }
+	}
+
         stage('Checkout') {
             steps {
                 script {
