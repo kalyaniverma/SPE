@@ -5,6 +5,13 @@ pipeline {
         DOCKER_IMAGE_NAME = 'calculator_using_python'
         GITHUB_REPO_URL = 'https://github.com/kalyaniverma/SPE.git'
     }
+
+    options {
+	// Enable GitHub hook trigger for GitSCM polling
+	triggers {
+		githubPush()
+	}
+    }
     
     stages {
         stage('Checkout') {
