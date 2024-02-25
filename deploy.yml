@@ -20,4 +20,4 @@
         state: started
 
     - name: Running container
-      shell: docker run -it -d --name python_calculator kalyaniv2001/calculator_using_python
+      shell: docker run -it -d --rm --name python_calculator kalyaniv2001/calculator_using_python
