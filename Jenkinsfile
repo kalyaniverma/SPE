@@ -4,10 +4,6 @@ pipeline {
     environment {
         DOCKER_IMAGE_NAME = 'calculator_using_python'
         GITHUB_REPO_URL = 'https://github.com/kalyaniverma/SPE.git'
-    }
-
-    // Define the secret ID
-    environment {
         SECRET_ID = 'WebHook_Cred'
     }
 
