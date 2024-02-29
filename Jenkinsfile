@@ -13,9 +13,7 @@ pipeline {
 
     // Enable GitHub hook trigger for GitSCM polling
     triggers {
-	githubPush(
-	    secret: credentials('WebHook_Cred')
-	)
+	githubPush()
     }
     
     stages {
