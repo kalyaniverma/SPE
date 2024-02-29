@@ -6,9 +6,16 @@ pipeline {
         GITHUB_REPO_URL = 'https://github.com/kalyaniverma/SPE.git'
     }
 
+    // Define the secret ID
+    environment {
+        SECRET_ID = 'WebHook_Cred'
+    }
+
     // Enable GitHub hook trigger for GitSCM polling
     triggers {
-	githubPush()
+	githubPush(
+	    secret: credentials('WebHook_Cred')
+	)
     }
     
     stages {
