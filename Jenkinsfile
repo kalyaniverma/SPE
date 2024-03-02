@@ -4,12 +4,6 @@ pipeline {
     environment {
         DOCKER_IMAGE_NAME = 'calculator_using_python'
         GITHUB_REPO_URL = 'https://github.com/kalyaniverma/SPE.git'
-        //SECRET_ID = 'WebHook_Cred'
-    }
-
-    // Enable GitHub hook trigger for GitSCM polling
-    triggers {
-	githubPush()
     }
     
     stages {
@@ -63,7 +57,7 @@ pipeline {
                     docker.withRegistry('', 'DockerHubCred') {
                         sh 'docker tag calculator_using_python kalyaniv2001/calculator_using_python:latest'
                         sh 'docker push kalyaniv2001/calculator_using_python'
-			sh 'docker rmi calculator_using_python'
+			//sh 'docker rmi calculator_using_python'
                     }
                 }
             }
