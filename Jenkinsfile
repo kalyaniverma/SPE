@@ -57,7 +57,7 @@ pipeline {
                     docker.withRegistry('', 'DockerHubCred') {
                         sh 'docker tag calculator_using_python kalyaniv2001/calculator_using_python:latest'
                         sh 'docker push kalyaniv2001/calculator_using_python'
-			//sh 'docker rmi calculator_using_python'
+			sh 'docker rmi calculator_using_python'
                     }
                 }
             }
